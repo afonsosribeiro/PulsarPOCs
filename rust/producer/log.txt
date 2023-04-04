@@ -1,0 +1,252 @@
+warning: unused imports: `thread`, `time`
+ --> src/main.rs:1:11
+  |
+1 | use std::{thread, time, path};
+  |           ^^^^^^  ^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `producer` (bin "producer") generated 1 warning
+    Finished dev [unoptimized + debuginfo] target(s) in 0.10s
+     Running `target/debug/producer`
+[2023-03-22T12:24:39.433Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "172.25.149.116:6650", proxy: false })
+[2023-03-22T12:24:39.433Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 923e58dc-aab6-48ab-a42e-f00c6efb4b2b
+[2023-03-22T12:24:39.434Z INFO  pulsar::connection_manager] Connected n°923e58dc-aab6-48ab-a42e-f00c6efb4b2b to pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.435Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "172.25.149.116:6650", proxy: false })
+[2023-03-22T12:24:39.435Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 1adac202-452b-49af-87b7-b00a414879f5
+[2023-03-22T12:24:39.435Z INFO  pulsar::connection_manager] Connected n°1adac202-452b-49af-87b7-b00a414879f5 to pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.435Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.435Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as d3b94960-82a0-4585-935d-1baf094b6989
+[2023-03-22T12:24:39.436Z INFO  pulsar::connection_manager] Connected n°d3b94960-82a0-4585-935d-1baf094b6989 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.437Z INFO  producer] connection ok
+[2023-03-22T12:24:39.763Z ERROR pulsar::producer] send_inner: connection d3b94960-82a0-4585-935d-1baf094b6989 disconnected
+[2023-03-22T12:24:39.763Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.763Z WARN  pulsar::connection] connection d3b94960-82a0-4585-935d-1baf094b6989 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.764Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.764Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 42307098-49fb-4d79-affb-486dcfa8cdbf
+[2023-03-22T12:24:39.764Z INFO  pulsar::connection_manager] Connected n°42307098-49fb-4d79-affb-486dcfa8cdbf to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.764Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 42307098-49fb-4d79-affb-486dcfa8cdbf to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.796Z ERROR pulsar::producer] send_inner: connection 42307098-49fb-4d79-affb-486dcfa8cdbf disconnected
+[2023-03-22T12:24:39.796Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.796Z DEBUG pulsar::producer] Closing producers of connection 42307098-49fb-4d79-affb-486dcfa8cdbf
+[2023-03-22T12:24:39.797Z WARN  pulsar::connection] connection 42307098-49fb-4d79-affb-486dcfa8cdbf disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.797Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.797Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as c0409505-1f9f-41b2-940f-769f0a6a31bb
+[2023-03-22T12:24:39.797Z INFO  pulsar::connection_manager] Connected n°c0409505-1f9f-41b2-940f-769f0a6a31bb to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.797Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection c0409505-1f9f-41b2-940f-769f0a6a31bb to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.829Z ERROR pulsar::producer] send_inner: connection c0409505-1f9f-41b2-940f-769f0a6a31bb disconnected
+[2023-03-22T12:24:39.829Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.829Z DEBUG pulsar::producer] Closing producers of connection c0409505-1f9f-41b2-940f-769f0a6a31bb
+[2023-03-22T12:24:39.829Z WARN  pulsar::connection] connection c0409505-1f9f-41b2-940f-769f0a6a31bb disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.830Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.830Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 2ede380d-e24b-4342-b512-33b0372c5865
+[2023-03-22T12:24:39.830Z INFO  pulsar::connection_manager] Connected n°2ede380d-e24b-4342-b512-33b0372c5865 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.830Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 2ede380d-e24b-4342-b512-33b0372c5865 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.859Z ERROR pulsar::producer] send_inner: connection 2ede380d-e24b-4342-b512-33b0372c5865 disconnected
+[2023-03-22T12:24:39.859Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.860Z DEBUG pulsar::producer] Closing producers of connection 2ede380d-e24b-4342-b512-33b0372c5865
+[2023-03-22T12:24:39.860Z WARN  pulsar::connection] connection 2ede380d-e24b-4342-b512-33b0372c5865 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.861Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.861Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as e7cd6b10-a858-4803-ac19-43324d0c410f
+[2023-03-22T12:24:39.861Z INFO  pulsar::connection_manager] Connected n°e7cd6b10-a858-4803-ac19-43324d0c410f to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.861Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection e7cd6b10-a858-4803-ac19-43324d0c410f to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.893Z ERROR pulsar::producer] send_inner: connection e7cd6b10-a858-4803-ac19-43324d0c410f disconnected
+[2023-03-22T12:24:39.893Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.893Z DEBUG pulsar::producer] Closing producers of connection e7cd6b10-a858-4803-ac19-43324d0c410f
+[2023-03-22T12:24:39.893Z WARN  pulsar::connection] connection e7cd6b10-a858-4803-ac19-43324d0c410f disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.893Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.894Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 3e058f83-aa8a-4855-bbe1-684062ce1176
+[2023-03-22T12:24:39.894Z INFO  pulsar::connection_manager] Connected n°3e058f83-aa8a-4855-bbe1-684062ce1176 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.894Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 3e058f83-aa8a-4855-bbe1-684062ce1176 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.924Z ERROR pulsar::producer] send_inner: connection 3e058f83-aa8a-4855-bbe1-684062ce1176 disconnected
+[2023-03-22T12:24:39.924Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.924Z DEBUG pulsar::producer] Closing producers of connection 3e058f83-aa8a-4855-bbe1-684062ce1176
+[2023-03-22T12:24:39.924Z WARN  pulsar::connection] connection 3e058f83-aa8a-4855-bbe1-684062ce1176 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.924Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.924Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 414a112c-bfe7-4db9-86cb-c2b930e99a63
+[2023-03-22T12:24:39.925Z INFO  pulsar::connection_manager] Connected n°414a112c-bfe7-4db9-86cb-c2b930e99a63 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.925Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 414a112c-bfe7-4db9-86cb-c2b930e99a63 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.955Z ERROR pulsar::producer] send_inner: connection 414a112c-bfe7-4db9-86cb-c2b930e99a63 disconnected
+[2023-03-22T12:24:39.955Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.955Z DEBUG pulsar::producer] Closing producers of connection 414a112c-bfe7-4db9-86cb-c2b930e99a63
+[2023-03-22T12:24:39.955Z WARN  pulsar::connection] connection 414a112c-bfe7-4db9-86cb-c2b930e99a63 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.955Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.956Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as abaede25-52cb-48e7-a043-b6c87b7bf71c
+[2023-03-22T12:24:39.956Z INFO  pulsar::connection_manager] Connected n°abaede25-52cb-48e7-a043-b6c87b7bf71c to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.956Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection abaede25-52cb-48e7-a043-b6c87b7bf71c to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:39.986Z ERROR pulsar::producer] send_inner: connection abaede25-52cb-48e7-a043-b6c87b7bf71c disconnected
+[2023-03-22T12:24:39.986Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:39.986Z DEBUG pulsar::producer] Closing producers of connection abaede25-52cb-48e7-a043-b6c87b7bf71c
+[2023-03-22T12:24:39.986Z WARN  pulsar::connection] connection abaede25-52cb-48e7-a043-b6c87b7bf71c disconnected sending message to the Pulsar server
+[2023-03-22T12:24:39.987Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:39.987Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as f9ab0d4b-df1c-424c-99d1-f155e7f7e82d
+[2023-03-22T12:24:39.987Z INFO  pulsar::connection_manager] Connected n°f9ab0d4b-df1c-424c-99d1-f155e7f7e82d to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:39.987Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection f9ab0d4b-df1c-424c-99d1-f155e7f7e82d to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.017Z ERROR pulsar::producer] send_inner: connection f9ab0d4b-df1c-424c-99d1-f155e7f7e82d disconnected
+[2023-03-22T12:24:40.017Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.017Z DEBUG pulsar::producer] Closing producers of connection f9ab0d4b-df1c-424c-99d1-f155e7f7e82d
+[2023-03-22T12:24:40.017Z WARN  pulsar::connection] connection f9ab0d4b-df1c-424c-99d1-f155e7f7e82d disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.018Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.018Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f
+[2023-03-22T12:24:40.018Z INFO  pulsar::connection_manager] Connected n°29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.018Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.050Z ERROR pulsar::producer] send_inner: connection 29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f disconnected
+[2023-03-22T12:24:40.050Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.050Z DEBUG pulsar::producer] Closing producers of connection 29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f
+[2023-03-22T12:24:40.050Z WARN  pulsar::connection] connection 29fd8c4b-bfd8-4708-aefc-0bf9ddd7c63f disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.051Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.051Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 2811b2a8-ab82-48e8-a423-fafc65554bb1
+[2023-03-22T12:24:40.051Z INFO  pulsar::connection_manager] Connected n°2811b2a8-ab82-48e8-a423-fafc65554bb1 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.051Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 2811b2a8-ab82-48e8-a423-fafc65554bb1 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.082Z ERROR pulsar::producer] send_inner: connection 2811b2a8-ab82-48e8-a423-fafc65554bb1 disconnected
+[2023-03-22T12:24:40.082Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.082Z DEBUG pulsar::producer] Closing producers of connection 2811b2a8-ab82-48e8-a423-fafc65554bb1
+[2023-03-22T12:24:40.082Z WARN  pulsar::connection] connection 2811b2a8-ab82-48e8-a423-fafc65554bb1 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.082Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.082Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 49330731-979f-4871-bd39-1ae0036ce53f
+[2023-03-22T12:24:40.082Z INFO  pulsar::connection_manager] Connected n°49330731-979f-4871-bd39-1ae0036ce53f to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.082Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 49330731-979f-4871-bd39-1ae0036ce53f to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.113Z ERROR pulsar::producer] send_inner: connection 49330731-979f-4871-bd39-1ae0036ce53f disconnected
+[2023-03-22T12:24:40.113Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.113Z DEBUG pulsar::producer] Closing producers of connection 49330731-979f-4871-bd39-1ae0036ce53f
+[2023-03-22T12:24:40.113Z WARN  pulsar::connection] connection 49330731-979f-4871-bd39-1ae0036ce53f disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.114Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.114Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as feb05e19-56da-4a94-b8f9-27c9a80711f3
+[2023-03-22T12:24:40.114Z INFO  pulsar::connection_manager] Connected n°feb05e19-56da-4a94-b8f9-27c9a80711f3 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.114Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection feb05e19-56da-4a94-b8f9-27c9a80711f3 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.148Z ERROR pulsar::producer] send_inner: connection feb05e19-56da-4a94-b8f9-27c9a80711f3 disconnected
+[2023-03-22T12:24:40.148Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.148Z DEBUG pulsar::producer] Closing producers of connection feb05e19-56da-4a94-b8f9-27c9a80711f3
+[2023-03-22T12:24:40.148Z WARN  pulsar::connection] connection feb05e19-56da-4a94-b8f9-27c9a80711f3 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.149Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.149Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as be205759-3943-42f0-b7d4-ee9133fdabb7
+[2023-03-22T12:24:40.150Z INFO  pulsar::connection_manager] Connected n°be205759-3943-42f0-b7d4-ee9133fdabb7 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.150Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection be205759-3943-42f0-b7d4-ee9133fdabb7 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.178Z ERROR pulsar::producer] send_inner: connection be205759-3943-42f0-b7d4-ee9133fdabb7 disconnected
+[2023-03-22T12:24:40.178Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.178Z DEBUG pulsar::producer] Closing producers of connection be205759-3943-42f0-b7d4-ee9133fdabb7
+[2023-03-22T12:24:40.178Z WARN  pulsar::connection] connection be205759-3943-42f0-b7d4-ee9133fdabb7 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.179Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.179Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as ad08d02c-227e-41c9-ab3b-b4aaf366cf90
+[2023-03-22T12:24:40.179Z INFO  pulsar::connection_manager] Connected n°ad08d02c-227e-41c9-ab3b-b4aaf366cf90 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.179Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection ad08d02c-227e-41c9-ab3b-b4aaf366cf90 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.209Z ERROR pulsar::producer] send_inner: connection ad08d02c-227e-41c9-ab3b-b4aaf366cf90 disconnected
+[2023-03-22T12:24:40.209Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.209Z DEBUG pulsar::producer] Closing producers of connection ad08d02c-227e-41c9-ab3b-b4aaf366cf90
+[2023-03-22T12:24:40.209Z WARN  pulsar::connection] connection ad08d02c-227e-41c9-ab3b-b4aaf366cf90 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.210Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.210Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 1efb92aa-11fc-490c-8b8e-050d7b36595d
+[2023-03-22T12:24:40.210Z INFO  pulsar::connection_manager] Connected n°1efb92aa-11fc-490c-8b8e-050d7b36595d to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.210Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 1efb92aa-11fc-490c-8b8e-050d7b36595d to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.240Z ERROR pulsar::producer] send_inner: connection 1efb92aa-11fc-490c-8b8e-050d7b36595d disconnected
+[2023-03-22T12:24:40.240Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.240Z DEBUG pulsar::producer] Closing producers of connection 1efb92aa-11fc-490c-8b8e-050d7b36595d
+[2023-03-22T12:24:40.240Z WARN  pulsar::connection] connection 1efb92aa-11fc-490c-8b8e-050d7b36595d disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.241Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.241Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as cbc1f87d-619a-4245-b2d1-cd11fea07276
+[2023-03-22T12:24:40.241Z INFO  pulsar::connection_manager] Connected n°cbc1f87d-619a-4245-b2d1-cd11fea07276 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.241Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection cbc1f87d-619a-4245-b2d1-cd11fea07276 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.270Z ERROR pulsar::producer] send_inner: connection cbc1f87d-619a-4245-b2d1-cd11fea07276 disconnected
+[2023-03-22T12:24:40.270Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.270Z DEBUG pulsar::producer] Closing producers of connection cbc1f87d-619a-4245-b2d1-cd11fea07276
+[2023-03-22T12:24:40.270Z WARN  pulsar::connection] connection cbc1f87d-619a-4245-b2d1-cd11fea07276 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.271Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.271Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as d1c1d562-9139-4a5c-a20f-27b0e7646d1d
+[2023-03-22T12:24:40.271Z INFO  pulsar::connection_manager] Connected n°d1c1d562-9139-4a5c-a20f-27b0e7646d1d to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.271Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection d1c1d562-9139-4a5c-a20f-27b0e7646d1d to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.301Z ERROR pulsar::producer] send_inner: connection d1c1d562-9139-4a5c-a20f-27b0e7646d1d disconnected
+[2023-03-22T12:24:40.301Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.301Z DEBUG pulsar::producer] Closing producers of connection d1c1d562-9139-4a5c-a20f-27b0e7646d1d
+[2023-03-22T12:24:40.301Z WARN  pulsar::connection] connection d1c1d562-9139-4a5c-a20f-27b0e7646d1d disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.302Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.302Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 989aed60-19b6-46a0-91bb-d6cb42a4f046
+[2023-03-22T12:24:40.302Z INFO  pulsar::connection_manager] Connected n°989aed60-19b6-46a0-91bb-d6cb42a4f046 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.302Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 989aed60-19b6-46a0-91bb-d6cb42a4f046 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.332Z ERROR pulsar::producer] send_inner: connection 989aed60-19b6-46a0-91bb-d6cb42a4f046 disconnected
+[2023-03-22T12:24:40.332Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.332Z DEBUG pulsar::producer] Closing producers of connection 989aed60-19b6-46a0-91bb-d6cb42a4f046
+[2023-03-22T12:24:40.332Z WARN  pulsar::connection] connection 989aed60-19b6-46a0-91bb-d6cb42a4f046 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.333Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.333Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 8c442944-bc11-4783-b777-d7e0932496eb
+[2023-03-22T12:24:40.333Z INFO  pulsar::connection_manager] Connected n°8c442944-bc11-4783-b777-d7e0932496eb to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.333Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 8c442944-bc11-4783-b777-d7e0932496eb to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.362Z ERROR pulsar::producer] send_inner: connection 8c442944-bc11-4783-b777-d7e0932496eb disconnected
+[2023-03-22T12:24:40.362Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.362Z DEBUG pulsar::producer] Closing producers of connection 8c442944-bc11-4783-b777-d7e0932496eb
+[2023-03-22T12:24:40.362Z WARN  pulsar::connection] connection 8c442944-bc11-4783-b777-d7e0932496eb disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.363Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.363Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d
+[2023-03-22T12:24:40.364Z INFO  pulsar::connection_manager] Connected n°eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.364Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.394Z ERROR pulsar::producer] send_inner: connection eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d disconnected
+[2023-03-22T12:24:40.394Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.394Z DEBUG pulsar::producer] Closing producers of connection eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d
+[2023-03-22T12:24:40.394Z WARN  pulsar::connection] connection eed5ec3a-64c8-447b-bed7-4a2f0dc29d3d disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.394Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.394Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 10ef810d-0f9a-4c97-9f58-62a642a6a9cc
+[2023-03-22T12:24:40.395Z INFO  pulsar::connection_manager] Connected n°10ef810d-0f9a-4c97-9f58-62a642a6a9cc to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.395Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 10ef810d-0f9a-4c97-9f58-62a642a6a9cc to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.424Z ERROR pulsar::producer] send_inner: connection 10ef810d-0f9a-4c97-9f58-62a642a6a9cc disconnected
+[2023-03-22T12:24:40.424Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.424Z DEBUG pulsar::producer] Closing producers of connection 10ef810d-0f9a-4c97-9f58-62a642a6a9cc
+[2023-03-22T12:24:40.424Z WARN  pulsar::connection] connection 10ef810d-0f9a-4c97-9f58-62a642a6a9cc disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.425Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.425Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 97d76c03-2407-484a-a3c5-97c4202cbf56
+[2023-03-22T12:24:40.425Z INFO  pulsar::connection_manager] Connected n°97d76c03-2407-484a-a3c5-97c4202cbf56 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.425Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 97d76c03-2407-484a-a3c5-97c4202cbf56 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.454Z ERROR pulsar::producer] send_inner: connection 97d76c03-2407-484a-a3c5-97c4202cbf56 disconnected
+[2023-03-22T12:24:40.454Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.454Z DEBUG pulsar::producer] Closing producers of connection 97d76c03-2407-484a-a3c5-97c4202cbf56
+[2023-03-22T12:24:40.454Z WARN  pulsar::connection] connection 97d76c03-2407-484a-a3c5-97c4202cbf56 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.455Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.455Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 7eb8517e-0e50-4fee-afe3-aea6864bd761
+[2023-03-22T12:24:40.456Z INFO  pulsar::connection_manager] Connected n°7eb8517e-0e50-4fee-afe3-aea6864bd761 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.456Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 7eb8517e-0e50-4fee-afe3-aea6864bd761 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.486Z ERROR pulsar::producer] send_inner: connection 7eb8517e-0e50-4fee-afe3-aea6864bd761 disconnected
+[2023-03-22T12:24:40.486Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.486Z DEBUG pulsar::producer] Closing producers of connection 7eb8517e-0e50-4fee-afe3-aea6864bd761
+[2023-03-22T12:24:40.486Z WARN  pulsar::connection] connection 7eb8517e-0e50-4fee-afe3-aea6864bd761 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.486Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.486Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 456b4e9d-b57f-4239-8fd5-38849efa89a1
+[2023-03-22T12:24:40.487Z INFO  pulsar::connection_manager] Connected n°456b4e9d-b57f-4239-8fd5-38849efa89a1 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.487Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 456b4e9d-b57f-4239-8fd5-38849efa89a1 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.515Z ERROR pulsar::producer] send_inner: connection 456b4e9d-b57f-4239-8fd5-38849efa89a1 disconnected
+[2023-03-22T12:24:40.515Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.515Z DEBUG pulsar::producer] Closing producers of connection 456b4e9d-b57f-4239-8fd5-38849efa89a1
+[2023-03-22T12:24:40.515Z WARN  pulsar::connection] connection 456b4e9d-b57f-4239-8fd5-38849efa89a1 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.516Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.516Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 69423d57-dc64-403b-8331-ed0644c74191
+[2023-03-22T12:24:40.517Z INFO  pulsar::connection_manager] Connected n°69423d57-dc64-403b-8331-ed0644c74191 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.517Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 69423d57-dc64-403b-8331-ed0644c74191 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.545Z ERROR pulsar::producer] send_inner: connection 69423d57-dc64-403b-8331-ed0644c74191 disconnected
+[2023-03-22T12:24:40.545Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.545Z DEBUG pulsar::producer] Closing producers of connection 69423d57-dc64-403b-8331-ed0644c74191
+[2023-03-22T12:24:40.545Z WARN  pulsar::connection] connection 69423d57-dc64-403b-8331-ed0644c74191 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.546Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.546Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 8be03313-b072-45a8-8f43-2279f1a0861c
+[2023-03-22T12:24:40.546Z INFO  pulsar::connection_manager] Connected n°8be03313-b072-45a8-8f43-2279f1a0861c to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.546Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 8be03313-b072-45a8-8f43-2279f1a0861c to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.576Z ERROR pulsar::producer] send_inner: connection 8be03313-b072-45a8-8f43-2279f1a0861c disconnected
+[2023-03-22T12:24:40.576Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.576Z DEBUG pulsar::producer] Closing producers of connection 8be03313-b072-45a8-8f43-2279f1a0861c
+[2023-03-22T12:24:40.576Z WARN  pulsar::connection] connection 8be03313-b072-45a8-8f43-2279f1a0861c disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.577Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.577Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89
+[2023-03-22T12:24:40.577Z INFO  pulsar::connection_manager] Connected n°3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.577Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.606Z ERROR pulsar::producer] send_inner: connection 3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89 disconnected
+[2023-03-22T12:24:40.606Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.606Z DEBUG pulsar::producer] Closing producers of connection 3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89
+[2023-03-22T12:24:40.606Z WARN  pulsar::connection] connection 3ff68b05-09c9-4e32-b0e5-ae3ff8f01c89 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.607Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.607Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as 4db049ec-d1d1-415f-9ada-facda768d0f6
+[2023-03-22T12:24:40.608Z INFO  pulsar::connection_manager] Connected n°4db049ec-d1d1-415f-9ada-facda768d0f6 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.608Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection 4db049ec-d1d1-415f-9ada-facda768d0f6 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog
+[2023-03-22T12:24:40.638Z ERROR pulsar::producer] send_inner: connection 4db049ec-d1d1-415f-9ada-facda768d0f6 disconnected
+[2023-03-22T12:24:40.638Z DEBUG pulsar::producer] reconnecting producer for topic: non-persistent://public/functions/clog
+[2023-03-22T12:24:40.638Z DEBUG pulsar::producer] Closing producers of connection 4db049ec-d1d1-415f-9ada-facda768d0f6
+[2023-03-22T12:24:40.638Z WARN  pulsar::connection] connection 4db049ec-d1d1-415f-9ada-facda768d0f6 disconnected sending message to the Pulsar server
+[2023-03-22T12:24:40.639Z DEBUG pulsar::connection_manager] ConnectionManager::connect(BrokerAddress { url: Url { scheme: "pulsar", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("172.25.149.116")), port: Some(6650), path: "", query: None, fragment: None }, broker_url: "localhost:6650", proxy: true })
+[2023-03-22T12:24:40.639Z DEBUG pulsar::connection] Connecting to pulsar://172.25.149.116:6650: 172.25.149.116:6650, as a4e7ca88-5de9-4483-866a-20f37c24e888
+[2023-03-22T12:24:40.640Z INFO  pulsar::connection_manager] Connected n°a4e7ca88-5de9-4483-866a-20f37c24e888 to localhost:6650 via proxy pulsar://172.25.149.116:6650 in 0ms
+[2023-03-22T12:24:40.640Z WARN  pulsar::producer] Retry #0 -> reconnecting producer 3822472077754988815 using connection a4e7ca88-5de9-4483-866a-20f37c24e888 to broker pulsar://172.25.149.116:6650 to topic non-persistent://public/functions/clog

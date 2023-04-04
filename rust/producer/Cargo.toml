@@ -1,0 +1,17 @@
+[package]
+name = "producer"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+env_logger = "0.9"
+pulsar = {git = "https://github.com/AfonsoRibeiro/pulsar-rs.git", branch = "max_batch_bytes"}
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread", "rt", "sync"] }
+log = "0.4.6"
+futures = "0.3"
+structopt = "0.3.26"
+chrono = "0.4.24"
