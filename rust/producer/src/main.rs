@@ -1,6 +1,7 @@
-mod producers;
+mod simple_producer;
+mod agg_producer;
 
-use std::{thread, time, path};
+use std::path;
 
 use pulsar::{
     producer, Pulsar, TokioExecutor, proto, Authentication
@@ -96,5 +97,5 @@ async fn main() -> Result<(), pulsar::Error> {
         .await
         .map(|_| log::info!("connection ok"))?;
 
-    producers::agg_producer(&mut producer).await
+    agg_producer::agg_producer(&mut producer).await
 }

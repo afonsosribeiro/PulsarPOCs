@@ -17,7 +17,7 @@ struct Opt {
     #[structopt(long = "sourcepulsar", help = "Destination pulsar address", default_value = "pulsar://localhost:6650")]
     sourcepulsar: String,
 
-    #[structopt(long = "sourcetopic", help = "Destination topic name", default_value = "non-persistent://public/functions/agg")]
+    #[structopt(long = "sourcetopic", help = "Destination topic name", default_value = "non-persistent://public/functions/parsed")]
     sourcetopic: String,
 
     #[structopt(long = "sourcesubscription", help = "Destination producer name", default_value = "perf_aggregator")]
